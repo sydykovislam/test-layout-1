@@ -35,3 +35,29 @@ switchers.forEach(function(el) {
     });
   });
 });
+
+const nav = document.querySelector(".sm-navul");
+const navButton = document.querySelector(".menu-icon");
+const navbar1 = document.querySelector(".bar-1");
+const navbar2 = document.querySelector(".bar-2");
+const navbar3 = document.querySelector(".bar-3");
+
+let navOpened = false;
+
+let openMenu = () => {
+  if (!navOpened) {
+    nav.className = "sm-navul sm-navul-opened";
+    navbar1.className = "bar bar-open-1";
+    navbar2.className = "bar bar-open-2";
+    navbar3.className = "bar bar-open-3";
+    navOpened = true;
+  } else {
+    nav.className = "sm-navul";
+    navbar1.className = "bar bar-close-1";
+    navbar2.className = "bar bar-close-2";
+    navbar3.className = "bar bar-close-3";
+    navOpened = false;
+  }
+};
+
+navButton.addEventListener("click", openMenu);
