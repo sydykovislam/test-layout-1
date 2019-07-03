@@ -11,7 +11,7 @@ body {
 }
 @media (max-width: 1100px) {
   :root {
-    --main-zone: 96%;
+    --main-zone: 90%;
   }
 }
 html {
@@ -54,11 +54,16 @@ html {
 .navul li a {
   color: white;
   text-decoration: none;
-  padding: 7px 10px 9px;
+  padding: 3px 10px 5px;
   box-sizing: border-box;
   border-radius: 5px;
 }
 .navul li a:hover {
+  color: lightgray;
+  border: 1.8px solid lightgray;
+  margin-right: -4px;
+}
+.navul li a:focus {
   color: aqua;
   border: 1.8px solid aqua;
   margin-right: -4px;
@@ -91,16 +96,23 @@ html {
 .sm-navul li:hover {
   border-top: 1px solid lightgray;
 }
+
 .sm-navul li:hover a {
   color: lightgray;
 }
+.sm-navul li a:focus {
+  color: aqua;
+}
 .sm-navul li a {
   color: white;
+  display: block;
+  width: 100%;
+  line-height: 20px;
   text-decoration: none;
   text-align: center;
-  padding: 7px 10px 9px;
+  /* padding: 7px 10px 9px; */
 }
-@media (max-width: 700px) {
+@media (max-width: 1150px) {
   .menu-icon {
     display: block;
   }
@@ -185,6 +197,23 @@ header {
   color: white;
   border: 2px solid rgba(35, 183, 163, 1);
 }
+@media (max-width: 700px) {
+  .headTitle {
+    font-size: 30px;
+  }
+  .headP {
+    font-size: 17px;
+    color: lightgrey;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 400px) {
+  .headTitle {
+    padding: 130px 0px 30px;
+    font-size: 25px;
+    font-weight: 400;
+  }
+}
 
 .header-sw {
   position: absolute;
@@ -234,6 +263,7 @@ main {
   margin: 0 auto;
 }
 .main-h1 {
+  font-size: 2em;
   font-weight: 500;
   margin: 35px 0px;
 }
@@ -245,6 +275,24 @@ main {
   background-color: rgb(225, 230, 234);
   margin-right: 10px;
   /* margin: 0px 0px -2em -35px; */
+}
+
+@media (max-width: 700px) {
+  .main-h1 {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 35px 0px;
+  }
+  .main-h1::before {
+    height: 19.5px;
+  }
+}
+@media (max-width: 400px) {
+  .headTitle {
+    padding: 130px 0px 30px;
+    font-size: 25px;
+    font-weight: 400;
+  }
 }
 #description {
   display: flex;
@@ -266,13 +314,32 @@ main {
 .des-1 {
   margin-right: 5px;
   flex: 1.5;
-  padding-right: 30px;
+  padding-right: 25px;
 }
 .des-1 p {
   margin-bottom: 30px !important;
 }
 .des-2 {
   flex: 1;
+}
+.des-2-block {
+  display: flex;
+}
+.des-2-block h2 {
+  line-height: 15px;
+  margin-bottom: 13px !important;
+}
+.num {
+  width: 40px !important;
+  height: 42px;
+  background-color: rgb(35, 183, 164);
+  margin-right: 15px;
+  line-height: 40px;
+  text-align: center;
+  color: white;
+}
+.des-2-con {
+  width: calc(100% - 55px);
 }
 
 #desIcons {
@@ -289,6 +356,9 @@ main {
   #description {
     flex-direction: column;
     justify-content: center;
+  }
+  .des-1 {
+    margin-bottom: 40px !important;
   }
   .des-2 {
     margin-top: 30px;
@@ -664,9 +734,10 @@ hr {
 /* FOOTER */
 #footer {
   width: 100%;
-  height: 120px;
+
   color: white;
   background-color: rgb(58, 69, 77);
+  padding: 40px auto !important;
 }
 .footer {
   width: var(--main-zone);
@@ -675,21 +746,32 @@ hr {
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
+  padding: 40px auto !important;
 }
 .footer h2 {
   font-weight: 300;
   font-size: 20px;
+  height: 100px;
+  width: 350px;
+  line-height: 100px;
 }
-@media (max-width: 700px) {
+@media (max-width: 730px) {
   .footer {
     flex-direction: column;
     justify-content: center;
+    justify-content: space-around;
   }
   .footer h2 {
-    margin: 30px 0px;
+    margin: 0px 0px;
+    height: 70px;
+    line-height: 70px;
   }
   .footer div {
     margin-bottom: 30px;
   }
+}
+.footer-icons {
+  min-width: 290px !important;
 }
