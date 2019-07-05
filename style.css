@@ -34,9 +34,11 @@ html {
   width: var(--main-zone);
   margin: 0 auto;
 }
-#navbrand h2 {
+#navbrand a {
+  text-decoration: none;
   color: white;
   font-size: 20px;
+  font-weight: 500;
 }
 
 .navul {
