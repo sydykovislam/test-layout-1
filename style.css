@@ -7,9 +7,9 @@ body {
   margin: 0px;
 }
 :root {
-  --main-zone: 1100px;
+  --main-zone: 913px;
 }
-@media (max-width: 1100px) {
+@media (max-width: 913px) {
   :root {
     --main-zone: 90%;
   }
@@ -30,12 +30,13 @@ html {
   justify-content: space-between;
   align-items: center;
   background-color: #3a454d;
-  height: 90px;
+  height: 65px;
   width: var(--main-zone);
   margin: 0 auto;
 }
 #navbrand h2 {
   color: white;
+  font-size: 20px;
 }
 
 .navul {
@@ -52,11 +53,13 @@ html {
 }
 
 .navul li a {
+  text-transform: uppercase;
+  font-size: 13px;
   color: white;
   text-decoration: none;
-  padding: 3px 10px 5px;
+  padding: 0px 5px 2px;
   box-sizing: border-box;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 .navul li a:hover {
   color: lightgray;
@@ -120,6 +123,11 @@ html {
     display: none;
   }
 }
+/* @media (max-width: 910px) {
+  .nav {
+    width: 95%;
+  }
+} */
 .display-block {
   display: block;
 }
@@ -152,42 +160,51 @@ html {
 /* HEADER */
 
 header {
+  display: flex;
+  align-items: center;
   background-color: #fff;
   width: 100%;
-  height: 665px;
-
+  height: 527px;
   background-size: cover;
   background-position: center;
   color: white;
   position: relative;
 }
 .header-content {
+  height: 182px !important;
+  display: flex;
+  align-items: center;
   width: var(--main-zone);
   margin: 0 auto;
   height: 100%;
+  position: relative;
+}
+[class^="header-"] {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .headTitle {
-  padding: 130px 0px 30px;
-  font-size: 40px;
+  font-size: 26px;
   font-weight: 400;
 }
 .headP {
-  font-size: 19px;
+  font-size: 14px;
   color: lightgrey;
-  margin-bottom: 40px;
+  margin: 14px 0px 33px;
 }
 #header-buttons {
   display: flex;
-  width: 270px;
+  width: 207px;
   justify-content: space-between;
 }
 #header-buttons button {
-  width: 130px;
-  height: 45px;
+  width: 100px;
+  height: 36px;
   background-color: rgba(35, 183, 163, 0);
   color: white;
-  font-size: 15px;
-  border-radius: 6px;
+  font-size: 10px;
+  border-radius: 4px;
   border: 2px solid white;
   font-weight: 500;
 }
@@ -215,9 +232,9 @@ header {
   }
 }
 
-.header-sw {
+.headerSw {
   position: absolute;
-  bottom: 30px;
+  bottom: -150px;
   right: 40px;
   display: flex;
 }
@@ -263,12 +280,12 @@ main {
   margin: 0 auto;
 }
 .main-h1 {
-  font-size: 2em;
+  font-size: 26px;
   font-weight: 500;
-  margin: 35px 0px;
+  margin: 63px 0px 38px;
 }
 .main-h1::before {
-  width: 10px;
+  width: 8px;
   height: 23px;
   content: "";
   display: inline-block;
@@ -301,7 +318,8 @@ main {
 }
 
 #description p {
-  font-size: 19px;
+  font-size: 14px;
+  line-height: 21px;
   margin-bottom: 10px;
   color: rgb(159, 161, 164);
 }
@@ -317,21 +335,25 @@ main {
   padding-right: 25px;
 }
 .des-1 p {
-  margin-bottom: 30px !important;
+  margin-bottom: 20px !important;
 }
 .des-2 {
-  flex: 1;
+  margin-top: 7px;
+  width: 365px;
 }
 .des-2-block {
   display: flex;
+  margin-bottom: 19px;
 }
-.des-2-block h2 {
-  line-height: 15px;
-  margin-bottom: 13px !important;
+.des-2-block h3 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 13px;
+  margin-bottom: 7px !important;
 }
 .num {
   width: 40px !important;
-  height: 42px;
+  height: 40px;
   background-color: rgb(35, 183, 164);
   margin-right: 15px;
   line-height: 40px;
@@ -345,11 +367,12 @@ main {
 #desIcons {
   display: flex;
   justify-content: space-between;
-  width: 250px;
+  width: 200px;
+  margin-top: 41px;
 }
-#desIcons i {
-  width: 45px;
-  height: 45px;
+
+#desIcons a {
+  width: 49px;
 }
 
 @media (max-width: 770px) {
@@ -370,14 +393,14 @@ main {
 }
 
 hr {
-  margin: 80px 0px;
+  margin: 77px 0px 0px;
 }
 
 /* TEAM */
 
 #our-team {
   width: var(--main-zone);
-  margin: 0px auto 80px;
+  margin: 0px auto 78px;
 }
 .team {
   display: flex;
@@ -387,8 +410,8 @@ hr {
 }
 
 .card {
-  width: 250px;
-  height: 400px;
+  width: 210px;
+  height: 308px;
 }
 
 .per-image {
@@ -421,17 +444,18 @@ hr {
   margin: auto;
   width: 100%;
 }
-.per-description h3 {
-  font-size: 17.5px;
-  font-weight: 400;
+.per-description h6 {
+  font-size: 11px;
+
+  font-weight: 500;
   margin: 3px 18px;
 }
 .per-name {
   text-transform: uppercase;
-  /* padding-top: 12px !important; */
 }
 .per-position {
   color: rgb(159, 161, 164);
+  font-size: 12px !important;
 }
 .card:hover .per-image {
   background-image: linear-gradient(
@@ -480,14 +504,14 @@ hr {
 }
 
 .work-img {
-  width: 350px;
-  height: 280px;
+  width: 290px;
+  height: 210px;
   /* background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
     url(https://cdn.pixabay.com/photo/2016/05/24/16/48/mountains-1412683_1280.png); */
   background-size: cover;
   background-position: center;
   overflow: hidden;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 .work-1 {
   background-image: url(https://cdn.pixabay.com/photo/2015/09/09/16/05/forest-931706__340.jpg);
@@ -513,7 +537,7 @@ hr {
   align-items: center;
   height: 80%;
 }
-.work-img h2 {
+.work-img h4 {
   display: flex;
   height: 20%;
   align-items: center;
@@ -531,7 +555,7 @@ hr {
 }
 
 .fa-plus-square:before {
-  font-size: 40px;
+  font-size: 35px;
   font-weight: 300;
   color: white;
 }
@@ -540,7 +564,7 @@ hr {
     url(https://cdn.pixabay.com/photo/2016/05/24/16/48/mountains-1412683_1280.png);
   transition: all 0.3s;
 } */
-.work-img:hover h2 {
+.work-img:hover h4 {
   margin-top: 0px;
   transition: all 0.2s;
 }
@@ -551,6 +575,20 @@ hr {
 .work-img:hover i {
   opacity: 1;
   transition: all 0.3s;
+}
+.show {
+  display: block;
+  margin: 27px auto 47px;
+  color: white;
+  text-decoration: none;
+  font-size: 11px;
+  border: 1.5px solid white;
+  border-radius: 3px;
+  padding: 9px 16px;
+}
+.show:hover {
+  background-color: rgba(35, 183, 163, 1);
+  border: 1.5px solid rgba(35, 183, 163, 1);
 }
 @media (max-width: 1100px) {
   .work-img {
@@ -566,33 +604,35 @@ hr {
 }
 .does {
   margin-top: 50px;
+  margin-bottom: 73px;
 }
 .do {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 275px;
+  width: 228.2px;
   margin: 10px 0px;
 }
 .do i {
-  margin-bottom: 17px;
+  margin-bottom: 28px;
 }
 .do i::before {
-  font-size: 60px;
+  font-size: 40px;
   color: rgb(35, 183, 164);
 }
-.do h2 {
+.do h3 {
   text-transform: uppercase;
   text-align: center;
-  font-weight: 400;
+  font-size: 13px;
+  font-weight: 500;
   margin-bottom: 17px;
 }
 .do p {
   text-align: center;
   color: rgb(159, 161, 164);
-  line-height: 30px;
-  font-size: 18px;
-  margin-bottom: 17px;
+  line-height: 20px;
+  font-size: 14px;
+  margin-bottom: 45px;
 }
 
 /* FEATURES */
@@ -606,14 +646,14 @@ hr {
   margin: 0 auto;
   color: white;
   background-color: rgb(58, 69, 77);
-  padding-bottom: 100px;
+  padding-bottom: 78px;
 }
 .feature-h1 {
   padding-top: 70px;
   margin-bottom: 50px;
 }
 .feature {
-  width: 350px;
+  width: 290px;
   display: flex;
   flex-direction: column;
 }
@@ -622,15 +662,15 @@ hr {
   width: 100%;
   height: auto;
 }
-.feature h1 {
+.feature h3 {
   text-transform: uppercase;
   font-weight: 400;
-  margin: 35px 0px 20px;
-  font-size: 20px;
+  margin: 38px 0px 15px;
+  font-size: 14px;
 }
 .feature p {
-  line-height: 28px;
-  font-size: 17.5px;
+  line-height: 20px;
+  font-size: 14px;
   color: rgb(159, 161, 164);
   margin-bottom: 30px;
 }
@@ -664,6 +704,9 @@ hr {
   color: rgb(159, 161, 164);
   margin-bottom: 30px;
   line-height: 25px;
+}
+.coninfo h3 {
+  font-size: 14px;
 }
 .form {
   width: 540px;
